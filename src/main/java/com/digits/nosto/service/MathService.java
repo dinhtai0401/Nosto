@@ -4,8 +4,6 @@ import com.digits.nosto.model.MathModel;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 @Service
 public class MathService {

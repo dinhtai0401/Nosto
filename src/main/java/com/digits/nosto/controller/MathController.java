@@ -20,6 +20,6 @@ public class MathController {
     @ResponseBody
     @GetMapping("/{number}")
     public MathModel getBiggerNumber(@PathVariable String number) {
-        return MathService.GetBiggerNumberService(number);
+        return mathService.GetBiggerNumberService(number);
     }
 }
