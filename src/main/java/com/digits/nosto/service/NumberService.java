@@ -1,29 +1,29 @@
 package com.digits.nosto.service;
 
-import com.digits.nosto.model.MathModel;
+import com.digits.nosto.model.NumberModel;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
 @Service
-public class MathService {
-        public static MathModel mathModel = new MathModel() ;
+public class NumberService {
 
-        public static MathModel GetBiggerNumberService(String number) {
+    public NumberModel getBigNumber(String number) {
+        NumberModel mathModel = new NumberModel();
+
         char a[]=number.toCharArray();
         int i, n=a.length;
         String result = null;
 
-        for(i=n-1; i>0; i--){
+        for (i=n-1; i>0; i--){
             if(a[i-1] < a[i])
                 break;
         }
 
-        if(i==0){
+        if (i == 0) {
             for(i=0; i<n; i++)
                 result = "No answer";
-        }
-        else {
+        } else {
             int min = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[j] > a[i - 1] && a[j] < a[min]) {
